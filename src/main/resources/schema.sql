@@ -4,5 +4,5 @@ model varchar(100) NOT NULL,
 year integer NOT NULL,
 milage integer NOT NULL,
 price integer NOT NULL,
-CONSTRAINTS pk_car_car_id PRIMARY KEY (car_id)
+CONSTRAINT pk_car_car_id PRIMARY KEY (car_id)
 );
