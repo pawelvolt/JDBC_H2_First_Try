@@ -11,7 +11,7 @@ import java.util.Optional;
 
 
 @Component
-public class MyJDBCDAO implements DAO<Car>{
+public class MyJDBCDAO implements DAO<Car> {
 
     private static final Logger log = LoggerFactory.getLogger(MyJDBCDAO.class);
     private JdbcTemplate jdbcTemplate;
@@ -22,7 +22,8 @@ public class MyJDBCDAO implements DAO<Car>{
 
     @Override
     public List<Car> list() {
-        return null;
+        String sql = "SELECT model, year, price FROM carStorage;";
+        jdbcTemplate.query(sql,(rs,rownum)->{});
     }
 
     @Override
