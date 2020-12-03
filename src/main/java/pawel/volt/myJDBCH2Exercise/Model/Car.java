@@ -1,18 +1,20 @@
 package pawel.volt.myJDBCH2Exercise.Model;
 
 public class Car {
+   // private int carId;
     private String model;
     private int year;
-    private int milage; //in km
+    private int mileage; //in km
     private long price;
 
     public Car() {
     }
 
-    public Car(String model, int year, int milage, long price) {
+    public Car( String model, int year, int mileage, long price) {
+        //this.carId = carId;
         this.model = model;
         this.year = year;
-        this.milage = milage;
+        this.mileage = mileage;
         this.price = price;
     }
 
@@ -33,11 +35,11 @@ public class Car {
     }
 
     public int getMilage() {
-        return milage;
+        return mileage;
     }
 
-    public void setMilage(int milage) {
-        this.milage = milage;
+    public void setMilage(int mileage) {
+        this.mileage = mileage;
     }
 
     public long getPrice() {
@@ -48,12 +50,20 @@ public class Car {
         this.price = price;
     }
 
+ /*   public int getCarId() {
+        return carId;
+    }
+
+    public void setCarId(int carId) {
+        this.carId = carId;
+    }
+*/
     @Override
     public String toString() {
         return "Car{" +
                 "model='" + model + '\'' +
                 ", year=" + year +
-                ", milage=" + milage +
+                ", mileage=" + mileage +
                 ", price=" + price +
                 '}';
     }

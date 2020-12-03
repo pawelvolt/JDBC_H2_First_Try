@@ -6,7 +6,7 @@ import java.util.Optional;
 public interface DAO<T> {
     List<T> list();
 
-    void create();
+    void create(T t);
 
     Optional<T> get(int id);
 
