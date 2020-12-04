@@ -73,4 +73,11 @@ public class MyJDBCDAO implements DAO<Car> {
     public void delete(int id) {
         jdbcTemplate.update("DELETE FROM carStorage WHERE car_id = ?", id);
     }
+
+
+    public List<Car> listCarsByPrice() {
+        String sql = "SELECT * FROM carStorage ORDER BY price DESC";
+        return jdbcTemplate.query(sql, carRowMapper);
+
+    }
 }

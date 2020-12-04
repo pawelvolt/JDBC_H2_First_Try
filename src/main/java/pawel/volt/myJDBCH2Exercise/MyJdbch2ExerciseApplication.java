@@ -1,9 +1,11 @@
 package pawel.volt.myJDBCH2Exercise;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import pawel.volt.myJDBCH2Exercise.Model.Car;
 import pawel.volt.myJDBCH2Exercise.dao.DAO;
+import pawel.volt.myJDBCH2Exercise.dao.MyJDBCDAO;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,8 +14,9 @@ import java.util.Optional;
 public class MyJdbch2ExerciseApplication {
     private static DAO<Car> dao;
 
+
     public MyJdbch2ExerciseApplication(DAO<Car> dao) {
-        this.dao = dao;
+        MyJdbch2ExerciseApplication.dao = dao;
     }
 
     public static void main(String[] args) {
@@ -40,6 +43,9 @@ public class MyJdbch2ExerciseApplication {
         List<Car> cars3 = dao.list();
         cars3.forEach(System.out::println);
 
+       /* System.out.println("\nGet list of cars sorted by price descending ---------\n");
+        System.out.println(dao.toString());
+        List<Car> listDesc = dao.*/
     }
 
 }
